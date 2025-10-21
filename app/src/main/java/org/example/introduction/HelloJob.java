@@ -12,7 +12,7 @@ public class HelloJob implements Job {
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        var instanceName = jobExecutionContext.getFireInstanceId();
-        logger.info(instanceName + " : " + "Hello World - " + new Date());
+        var instanceId = jobExecutionContext.getFireInstanceId();
+        logger.info(instanceId + " : " + "Hello World - " + new Date());
     }
 }
